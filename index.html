@@ -552,8 +552,8 @@
 
             <div class="mt-8 mb-4 border-2 border-hud-gold px-6 py-3 rounded-xl bg-hud-gold/10 inline-block">
                 <h3 class="text-xl md:text-3xl font-black italic tracking-wider text-hud-gold">
-                    グランドオープン！<br>
-                    <span class="text-hud-red text-sm md:text-xl">（３月１日）</span>
+                    絶賛営業中！<br>
+                    <span class="text-hud-red text-sm md:text-xl">（３月１日より）</span>
                 </h3>
             </div>
 
@@ -585,7 +585,7 @@
                             <span class="w-2 h-8 bg-hud-red"></span>
                             パーク詳細
                         </h3>
-                        <p class="text-gray-200 leading-relaxed mb-8">
+                        <p class="text-gray-300 leading-relaxed mb-8">
                             世界遺産「新原・奴山古墳群」近くの広大なDID地区外エリア。約4,000坪の開放的なフィールドで、法改正後も安心して飛行訓練が可能です。
                         </p>
                         <ul class="text-xs space-y-4 font-tech text-hud-blue/60">
@@ -650,7 +650,7 @@
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
                         <div>
                             <h3 class="text-3xl font-black mb-4">二等一等国家資格取得レッスン</h3>
-                            <div class="text-sm text-gray-200 max-w-xl space-y-4">
+                            <div class="text-sm text-gray-300 max-w-xl space-y-4">
                                 <p><span class="text-hud-gold">▶</span> 二等国家資格終了審査員による本番実技試験と全く同じ場を再現（重要事項の詳細解説付き）</p>
                                 <p><span class="text-hud-gold">▶</span> 試験官への受け答え、スクエア飛行、８の字、緊急事態等細かく解説。</p>
                                 <p class="text-hud-blue italic font-bold">「本番で余裕ができ、実力を発揮できます（事前予約推奨）」</p>
@@ -681,7 +681,7 @@
                         <div class="text-5xl font-black mb-2">&yen;2,200 <span class="text-xs font-normal">/ 1時間</span>
                         </div>
                         <p class="text-[10px] text-gray-300">一般利用・フリーフライト</p>
-                        <div class="mt-4 pt-4 border-t border-hud-blue/10 text-xs text-gray-200">延長料：¥770 / 1時間 |
+                        <div class="mt-4 pt-4 border-t border-hud-blue/10 text-xs text-gray-300">延長料：¥770 / 1時間 |
                             1日貸切：¥44,000</div>
                     </div>
                     <div class="hud-panel p-8 border-l-4 border-hud-blue">
@@ -809,18 +809,21 @@
                 <h2 class="text-3xl font-black mb-10 text-center tracking-widest">TRANSMISSION</h2>
 
                 <form id="reservationForm" class="space-y-6">
+
+
+
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label
                                 class="text-[10px] font-tech text-hud-blue mb-2 block tracking-widest uppercase">氏名</label>
-                            <input type="text" id="name"
+                            <input type="text" id="name" name="氏名"
                                 class="w-full bg-white/5 border border-hud-blue/20 p-3 text-sm focus:border-hud-blue outline-none transition-all"
                                 required>
                         </div>
                         <div>
                             <label
                                 class="text-[10px] font-tech text-hud-blue mb-2 block tracking-widest uppercase">年齢</label>
-                            <input type="number" id="age"
+                            <input type="number" id="age" name="年齢"
                                 class="w-full bg-white/5 border border-hud-blue/20 p-3 text-sm focus:border-hud-blue outline-none"
                                 required>
                         </div>
@@ -829,7 +832,7 @@
                     <div>
                         <label
                             class="text-[10px] font-tech text-hud-blue mb-2 block tracking-widest uppercase">ご住所</label>
-                        <input type="text" id="address"
+                        <input type="text" id="address" name="住所"
                             class="w-full bg-white/5 border border-hud-blue/20 p-3 text-sm focus:border-hud-blue outline-none"
                             required>
                     </div>
@@ -837,7 +840,7 @@
                     <div>
                         <label
                             class="text-[10px] font-tech text-hud-blue mb-2 block tracking-widest uppercase">連絡先電話番号</label>
-                        <input type="tel" id="tel"
+                        <input type="tel" id="tel" name="電話番号"
                             class="w-full bg-white/5 border border-hud-blue/20 p-3 text-sm focus:border-hud-blue outline-none"
                             placeholder="090-0000-0000" required>
                     </div>
@@ -845,7 +848,7 @@
                     <div>
                         <label
                             class="text-[10px] font-tech text-hud-blue mb-2 block tracking-widest uppercase">ドローン保有資格</label>
-                        <select id="license"
+                        <select id="license" name="保有資格"
                             class="w-full bg-bg-pitch border border-hud-blue/20 p-3 text-sm focus:border-hud-blue outline-none">
                             <option value="民間資格">▼ 民間資格</option>
                             <option value="国家資格（二等）">▼ 国家資格（二等）</option>
@@ -858,14 +861,14 @@
                         <div>
                             <label
                                 class="text-[10px] font-tech text-hud-blue mb-2 block tracking-widest uppercase">ご希望日</label>
-                            <input type="date" id="date"
+                            <input type="date" id="date" name="予約日"
                                 class="w-full bg-white/5 border border-hud-blue/20 p-3 text-sm focus:border-hud-blue outline-none"
                                 required>
                         </div>
                         <div>
                             <label
                                 class="text-[10px] font-tech text-hud-blue mb-2 block tracking-widest uppercase">希望練習種類</label>
-                            <select id="type"
+                            <select id="type" name="練習種類"
                                 class="w-full bg-bg-pitch border border-hud-blue/20 p-3 text-sm focus:border-hud-blue outline-none">
                                 <option value="緊張する80分 二等コース">▼ 緊張する80分 二等コース</option>
                                 <option value="緊張する90分 一等コース">▼ 緊張する90分 一等コース</option>
@@ -880,7 +883,7 @@
                     <!-- Payment HUD Box -->
                     <div class="bg-hud-gold/5 border border-hud-gold/30 p-6 rounded-sm mt-10">
                         <h4 class="text-[10px] text-hud-gold font-black uppercase mb-4 tracking-[0.3em]">【お支払い方法】</h4>
-                        <div class="text-[10px] text-gray-200 leading-relaxed mb-6 space-y-2">
+                        <div class="text-[10px] text-gray-300 leading-relaxed mb-6 space-y-2">
                             <p class="text-hud-blue">■ 銀行振込</p>
                             <p>PayPay銀行 本店営業部(001) / 普通 1240898<br>名義：ドローンパークフクツ</p>
                             <div class="pt-4">
@@ -894,41 +897,41 @@
                                 onchange="toggleSubmitButton()">
                             <span class="text-[10px] text-hud-gold font-bold uppercase tracking-widest cursor-pointer"
                                 onclick="document.getElementById('paymentCheck').click()">Verification:
+                                支払いを完了しました</span>
+                        </div>
+                    </div>
 
-                                <div
-                                    class="bg-white/5 p-4 rounded-sm border border-white/10 text-[14px] text-gray-100 leading-relaxed uppercase">
-                                    <p class="text-hud-gold mb-2 text-lg">【ご利用規約・注意事項】</p>
-                                    <p>1. DIPS2.0申請等は事前に済ませておくこと。</p>
-                                    <p>2. 飛行マニュアル及び許可・承認書は厳守のこと。</p>
-                                    <p>3. 機体保険には必ず加入しておくこと。</p>
-                                    <p>4. 事故に関しては全て自己責任となります。</p>
-                                </div>
+                    <div
+                        class="bg-white/5 p-6 rounded-sm border border-white/20 text-sm text-gray-200 leading-relaxed">
+                        <p class="text-hud-gold mb-3 font-black text-base">【ご利用規約・注意事項】</p>
+                        <p class="mb-2">1. DIPS2.0申請等は事前に済ませておくこと。</p>
+                        <p class="mb-2">2. 飛行マニュアル及び許可・承認書は厳守のこと。</p>
+                        <p class="mb-2">3. 機体保険には必ず加入しておくこと。</p>
+                        <p>4. 事故に関しては全て自己責任となります。</p>
+                    </div>
 
-                                <div class="bg-hud-blue/5 border border-hud-blue/30 p-6 rounded-sm mt-6">
-                                    <p class="text-[12px] text-hud-blue mb-4 leading-relaxed">
-                                        尚、ご紹介者がいる場合、お試し特典として１時間無料になります。
-                                    </p>
-                                    <label
-                                        class="text-[14px] font-tech text-hud-gold mb-2 block tracking-widest uppercase font-black italic">ご紹介者名</label>
-                                    <input type="text" id="referrer"
-                                        class="w-full bg-white/5 border border-hud-blue/20 p-3 text-sm focus:border-hud-blue outline-none transition-all"
-                                        placeholder="ご紹介者様のお名前をご記入ください">
-                                </div>
+                    <div class="bg-hud-blue/5 border border-hud-blue/30 p-6 rounded-sm mt-4">
+                        <p class="text-sm text-gray-200 leading-relaxed mb-4">
+                            当パークをご紹介いただいた方がいらっしゃる場合、初回お試し特典として<span class="text-hud-blue font-black">１時間分の利用料を無料</span>とさせていただいております。<br>
+                            <span class="text-gray-300 text-xs mt-1 block">該当される方は、下記にご紹介者のお名前をご記入ください。</span>
+                        </p>
+                        <label class="text-sm font-bold text-hud-blue mb-2 block tracking-widest">ご紹介者名</label>
+                        <input type="text" id="referrer" name="紹介者名" placeholder="ご紹介者名をご記入ください"
+                            class="w-full bg-white/5 border border-hud-blue/20 p-3 text-sm focus:border-hud-blue outline-none">
+                    </div>
 
-                                <div class="flex items-center gap-3 pt-4">
-                                    <input type="checkbox" id="agreement" class="accent-hud-blue"
-                                        onchange="toggleSubmitButton()">
-                                    <span class="text-[10px] text-hud-blue/60 tracking-widest cursor-pointer uppercase"
-                                        onclick="document.getElementById('agreement').click()">規約に同意して予約リクエストを送る</span>
-                                </div>
+                    <div class="flex items-center gap-3 pt-4">
+                        <input type="checkbox" id="agreement" class="accent-hud-blue" onchange="toggleSubmitButton()">
+                        <span class="text-sm text-gray-200 tracking-widest cursor-pointer"
+                            onclick="document.getElementById('agreement').click()">規約に同意して予約リクエストを送る</span>
+                    </div>
 
-                                <button type="submit" id="submitBtn"
-                                    class="w-full py-5 bg-hud-blue text-bg-pitch font-black tracking-[0.5em] hover:bg-white transition-all disabled:bg-gray-800 disabled:text-gray-300 uppercase"
-                                    disabled>SEND TRANSMISSION</button>
+                    <button type="submit" id="submitBtn"
+                        class="w-full py-5 bg-hud-blue text-bg-pitch font-black tracking-[0.5em] hover:bg-white transition-all disabled:bg-gray-800 disabled:text-gray-300 uppercase"
+                        disabled>SEND TRANSMISSION</button>
 
-                                <p class="text-[8px] text-center text-hud-blue/30 mt-4 uppercase">© 2026 Drone Park
-                                    Fukutsu COMMAND
-                                    CENTER</p>
+                    <p class="text-[8px] text-center text-hud-blue/30 mt-4 uppercase">© 2026 Drone Park Fukutsu COMMAND
+                        CENTER</p>
                 </form>
             </div>
         </section>
@@ -1081,13 +1084,6 @@
             }
         }, { passive: true });
 
-        // --- Reservation Protocol Logic ---
-        function toggleSubmitButton() {
-            const agreement = document.getElementById('agreement');
-            const submitBtn = document.getElementById('submitBtn');
-            // Simplified: only require agreement checkbox
-            submitBtn.disabled = !agreement.checked;
-        }
 
         // --- Lightbox Logic ---
         let currentImageIndex = 0;
@@ -1166,23 +1162,76 @@
             }
         });
 
+        // --- Reservation Protocol Logic ---
+        function toggleSubmitButton() {
+            const agreement = document.getElementById('agreement');
+            const submitBtn = document.getElementById('submitBtn');
+            if (agreement && submitBtn) {
+                submitBtn.disabled = !agreement.checked;
+            }
+        }
+
+        // 初期状態でボタンの状態を更新
+        toggleSubmitButton();
+
+        // --- Reservation Submission (Google Apps Script / AJAX approach) ---
         document.getElementById('reservationForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = 'show1180@rakumail.jp';
-            const subject = encodeURIComponent(`【NEXT-GEN RESERVE】${name}様`);
-            const body = encodeURIComponent(
-                `COMMAND CENTER TRANSMISSION\n` +
-                `--------------------------\n` +
-                `NAME: ${name}\n` +
-                `DATE: ${document.getElementById('date').value}\n` +
-                `TEL: ${document.getElementById('tel').value}\n` +
-                `PROTOCOL: AGREED\n` +
-                `PAYMENT: COMPLETED\n` +
-                `--------------------------\n`
-            );
-            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+
+            const btn = document.getElementById('submitBtn');
+            const originalBtnText = btn.innerHTML;
+            btn.innerHTML = '送信中...';
+            btn.disabled = true;
+
+            // フォームデータの収集
+            const formData = {
+                name: document.getElementById('name').value,
+                tel: document.getElementById('tel').value,
+                date: document.getElementById('date').value,
+                type: document.getElementById('type').value,
+                age: document.getElementById('age').value || '未記入',
+                address: document.getElementById('address').value || '未記入',
+                license: document.getElementById('license').value || '未選択',
+                referrer: document.getElementById('referrer').value || 'なし'
+            };
+
+            // 【重要】ここに Google Apps Script の Web アプリ URL を貼り付けます
+            // ※セットアップ方法はチャットでお伝えします
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzoBXd1uaZjyABpwPdVInKwuuiNyoR8OLDy_J3jC2AN3TWHv5JG_2PlS02JxN47MqUm/exec';
+
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors', // CORSエラーを回避
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            })
+                .then(() => {
+                    // 送信完了のUI表示
+                    btn.innerHTML = '予約リクエスト送信完了';
+                    btn.style.backgroundColor = '#4ade80'; // 成功カラー（緑）
+                    btn.style.color = '#05060a';
+
+                    // ガイドの削除と成功メッセージの表示
+                    const oldGuide = document.getElementById('submission-guide');
+                    if (oldGuide) oldGuide.remove();
+
+                    const successMsg = document.createElement('div');
+                    successMsg.className = 'mt-4 p-4 bg-green-500/20 border border-green-500 text-green-400 text-xs leading-relaxed rounded-sm scale-in';
+                    successMsg.innerHTML = `
+                    <p class="font-bold mb-1">【送信成功】</p>
+                    <p>予約リクエストが正常に送信されました。管理者からの連絡をお待ちください。</p>
+                `;
+                    this.appendChild(successMsg);
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    btn.innerHTML = 'エラーが発生しました';
+                    btn.disabled = false;
+                    alert('送信に失敗しました。時間をおいて再度お試しいただくか、直接メールでお送りください。');
+                });
         });
+
+
     </script>
 </body>
 
