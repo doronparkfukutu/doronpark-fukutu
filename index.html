@@ -890,14 +890,21 @@
                                 <p class="text-hud-blue mb-2">■ オンライン決済</p>
                                 <a href="https://qr.paypay.ne.jp/p2p01_K1rQI1ifBCUgouws" target="_blank"
                                     class="inline-block bg-hud-red/20 border border-hud-red text-hud-red px-4 py-2 text-[8px] font-black uppercase tracking-widest hover:bg-hud-red hover:text-white transition-all">PayPayでお支払い</a>
+                                <p class="text-gray-300 mt-3 text-xs">パークでQRコードによるお支払いも可能です。</p>
                             </div>
                         </div>
-                        <div class="flex items-center gap-3">
+                        <div class="flex items-center gap-3 mb-3">
                             <input type="checkbox" id="paymentCheck" class="accent-hud-gold"
                                 onchange="toggleSubmitButton()">
                             <span class="text-[10px] text-hud-gold font-bold uppercase tracking-widest cursor-pointer"
                                 onclick="document.getElementById('paymentCheck').click()">Verification:
                                 支払いを完了しました</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <input type="checkbox" id="parkPayCheck" class="accent-hud-gold"
+                                onchange="toggleSubmitButton()">
+                            <span class="text-[10px] text-hud-gold font-bold uppercase tracking-widest cursor-pointer"
+                                onclick="document.getElementById('parkPayCheck').click()">パークでPayPay支払い</span>
                         </div>
                     </div>
 
@@ -1165,9 +1172,12 @@
         // --- Reservation Protocol Logic ---
         function toggleSubmitButton() {
             const agreement = document.getElementById('agreement');
+            const paymentCheck = document.getElementById('paymentCheck');
+            const parkPayCheck = document.getElementById('parkPayCheck');
             const submitBtn = document.getElementById('submitBtn');
             if (agreement && submitBtn) {
-                submitBtn.disabled = !agreement.checked;
+                const paymentOk = (paymentCheck && paymentCheck.checked) || (parkPayCheck && parkPayCheck.checked);
+                submitBtn.disabled = !(agreement.checked && paymentOk);
             }
         }
 
